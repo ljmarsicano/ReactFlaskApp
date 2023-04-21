@@ -1,0 +1,54 @@
+header a img {
+    height: 83px;
+}
+
+header {
+    background-color: #4DE1FF;
+    border-bottom: 1px solid black;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+    /* border-left: 1px solid black;
+    border-right: 1px solid black; */
+    padding: 10px 20px;
+    transition: all 0.1s ease-in-out;
+    border-radius: 5px;
+}
+
+header li:hover {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+#login, #logout{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#login:hover, #logout:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+

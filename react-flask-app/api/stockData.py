@@ -32,7 +32,7 @@ r = requests.get(TRADE_URL,
                  params= {'start': start_date,
                           'end': end_date,
                           'limit': data_points})
-print(json.loads(r.content))
+#print(json.loads(r.content))
 
 def on_message(ws, message):
     print("message: " + message)
@@ -47,11 +47,11 @@ def on_open(ws):
     ws.send('{"type":"subscribe","symbol":"AAPL"}')
     ws.send('{"type":"subscribe","symbol":"AMZN"}')
 
-if __name__ == "__main__":
-    websocket.enableTrace(True)
-    ws = websocket.WebSocketApp("wss://ws.finnhub.io?token=cgrl3q9r01qs9ra1ukagcgrl3q9r01qs9ra1ukb0",
-                              on_message = on_message,
-                              on_error = on_error,
-                              on_close = on_close)
-    ws.on_open = on_open
-    ws.run_forever()
+
+websocket.enableTrace(True)
+ws = websocket.WebSocketApp("wss://ws.finnhub.io?token=cgrl3q9r01qs9ra1ukagcgrl3q9r01qs9ra1ukb0",
+                             on_message = on_message,
+                             on_error = on_error,
+                             on_close = on_close)
+ws.on_open = on_open
+ws.run_forever()

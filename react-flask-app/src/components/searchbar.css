@@ -1,0 +1,20 @@
+.search-container {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    display: inline;
+}
+
+#search-button {
+    background-color: #4DE1FF;
+    color: black;
+    width: 100px;
+}
+
+.searchbar {
+    width: 300px
+}
